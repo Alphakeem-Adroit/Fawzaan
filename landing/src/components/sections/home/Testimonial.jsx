@@ -39,7 +39,7 @@ const Testimonial = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-16 w-1/2 lg:w-1/3 md:w-1/2 sm:w-1/2">
+        <div className="mb-16 w-full lg:w-1/3 md:w-1/2 sm:w-full">
           <SectionTextLeft title="Hear from those who travelled with us." />
         </div>
 
