@@ -53,7 +53,7 @@ const Tourism = () => {
                         <a 
                             key={index}
                             href={destination.href}
-                            className="relative group overflow-hidden rounded-3xl h-[520px] sm:h-[560px] w-[300px] sm:w-[350px] md:w-[400px] flex-shrink-0 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer block snap-start"
+                            className="relative group overflow-hidden rounded-3xl h-130 sm:h-140 w-75 sm:w-87.5 md:w-100 shrink-0 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer block snap-start"
                         >
                             {/* Full Image Background */}
                             <img 
@@ -63,7 +63,7 @@ const Tourism = () => {
                             />
                             
                             {/* Black down-to-up linear overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent transition-opacity duration-300" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-transparent transition-opacity duration-300" />
 
                             {/* Left-Aligned Large Serif Text */}
                             <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col items-start justify-end">

@@ -6,25 +6,25 @@ const Journey = () => {
     const ref = useRef(null);
 
     useEffect(() => {
+        const currentRef = ref.current;
+        if (!currentRef) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting && !hasAnimated) {
+                if (entry.isIntersecting) {
                     setHasAnimated(true);
+                    observer.disconnect(); // Stop observing once triggered
                 }
             },
             { threshold: 0.3 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+        observer.observe(currentRef);
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
+            observer.disconnect();
         };
-    }, [hasAnimated]);
+    }, []); // Empty array means it sets up once and avoids messy re-triggers
 
     useEffect(() => {
         if (!hasAnimated) return;

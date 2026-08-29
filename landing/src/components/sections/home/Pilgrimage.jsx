@@ -69,7 +69,7 @@ const Pilgrimage = () => {
                     </div>
 
                     {/* Right Column: 100% Full Height Image */}
-                    <div className="relative w-full h-full min-h-[450px] sm:min-h-[550px] lg:min-h-full flex items-center justify-center">
+                    <div className="relative w-full h-full min-h-112.5 sm:min-h-137.5 lg:min-h-full flex items-center justify-center">
                         <div className="absolute inset-0 bg-navy/5 rounded-3xl transform rotate-2 scale-[0.98] -z-10" />
                         <img 
                             src={kabah_door} 
