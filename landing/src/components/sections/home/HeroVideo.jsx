@@ -1,0 +1,43 @@
+import Navbar from '../general/Navbar';
+import HeroText from '../general/HeroText';
+import ButtonPrimary from '../general/ButtonPrimary';
+import ButtonSecondary from '../general/ButtonSecondary';
+import SaudiAirTakeOff from '../../../assets/SaudiAirTakeOff.mp4';
+
+const Hero = () => {
+    return (
+        <header className="relative min-h-screen flex flex-col justify-between overflow-hidden"> 
+            {/* Background Video */}
+            <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+                <source src={SaudiAirTakeOff} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            {/* SkyBlue Overlay */}
+            <div className="absolute inset-0 bg-navy/75 z-10" />
+
+            <Navbar />
+
+            {/* Main Hero Content with adequate top padding to prevent navbar overlap */}
+            <div className="relative z-20 flex flex-col items-center justify-center flex-grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center">
+                <HeroText 
+                    title="Your journey of faith, made very easy." 
+                    description="From preparation to pilgrimage and beyond, we arrange Hajj, Umrah and international travel with personal care, professional service and guidance you can rely on at every step." 
+                />
+
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full sm:w-auto">
+                    <ButtonPrimary text="Explore Hajj/Umrah" href="/#hajj/umrah" />
+                    <ButtonSecondary text="Explore Tourism" href="/tourism" />
+                </div>
+            </div>
+        </header>
+    );
+};
+
+export default Hero;
