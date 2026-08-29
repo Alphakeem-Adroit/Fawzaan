@@ -116,10 +116,10 @@ const Navbar = () => {
                 }`}
             >
                 <div className="flex items-center gap-3 p-6 border-b border-gray-100">
-                    <img src={company_logo} alt="Logo" className="w-10 h-10 object-contain" />
+                    <img src={company_logo} alt="Al-Fawzaan Makarem Logo" className="w-10 h-10 object-contain" />
                     <div>
-                        <h2 className="font-serif text-lg font-bold text-navy leading-tight">Al-Fawzaan</h2>
-                        <p className="font-sans text-xs text-gray-600">Travels & Tours</p>
+                        <h2 className="font-serif text-lg font-bold text-navy leading-tight">Al-Fawzaan Makarem</h2>
+                        <p className="font-sans text-xs text-gray-600">International Travels & Tours Ltd</p>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@ const Navbar = () => {
                             <a 
                                 href={link.href}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="block px-6 py-4 font-sans text-gray-800 font-medium transition-all duration-200 transform hover:translate-x-2 hover:bg-gray-50 hover:text-navy border-l-4 border-transparent hover:border-navy"
+                                className="block px-6 py-4 font-sans text-gray-800 font-medium transition-colors duration-200 hover:bg-gray-50 hover:text-navy border-l-4 border-transparent hover:border-navy"
                             >
                                 {link.name}
                             </a>

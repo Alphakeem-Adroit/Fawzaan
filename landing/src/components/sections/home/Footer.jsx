@@ -98,7 +98,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-gray-500 text-center sm:text-left">
           <p>&copy; 2026 Al-Fawzaan Makarem International Travels & Tours Limited. All Rights Reserved.</p>
-          <p>Website designed and developed with ❤️ by <a href="https://wa.me/2349033023139" className={linkStyle}>@alphakeemAdroit</a></p>
+          <small>Website designed and developed with ❤️ by <a href="https://wa.me/2349033023139" className="relative inline-block text-blue hover:text-black transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-[-2px] after:left-0 after:bg-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">@alphakeemAdroit</a></small>
         </div>
 
       </div>

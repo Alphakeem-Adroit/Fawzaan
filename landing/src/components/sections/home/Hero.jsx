@@ -17,7 +17,7 @@ const Hero = () => {
             <Navbar />
 
             {/* Main Hero Content with adequate top padding to prevent navbar overlap */}
-            <div className="relative z-10 flex flex-col items-center justify-center flex-grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center">
+            <div className="relative z-10 flex flex-col items-center justify-center grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center">
                 <HeroText 
                     title="Your journey of faith, made very easy." 
                     description="From preparation to pilgrimage and beyond, we arrange Hajj, Umrah and international travel with personal care, professional service and guidance you can rely on at every step." 

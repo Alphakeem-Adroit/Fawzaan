@@ -42,7 +42,7 @@ const Lecture = () => {
                                         <hr className="border-gray-100" />
                                         <div 
                                             tabIndex={0}
-                                            className="group flex items-center justify-between py-6 px-4 rounded-2xl transition-all duration-300 ease-in-out hover:translate-x-2 focus:bg-skyblue/10 focus:translate-x-2 focus:outline-none cursor-pointer"
+                                            className="group flex items-center justify-between py-6 px-4 transition-all duration-300 ease-in-out hover:translate-x-2 focus:translate-x-2 focus:outline-none cursor-pointer"
                                         >
                                             <div className="flex flex-col pr-4">
                                                 <h3 className="font-serif font-semibold text-lg sm:text-xl text-black group-hover:text-blue transition-colors">

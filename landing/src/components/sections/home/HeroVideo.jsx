@@ -20,7 +20,7 @@ const Hero = () => {
             </video>
 
             {/* SkyBlue Overlay */}
-            <div className="absolute inset-0 bg-navy/75 z-10" />
+            <div className="absolute inset-0 bg-navy/80 z-10" />
 
             <Navbar />
 
@@ -31,7 +31,7 @@ const Hero = () => {
                     description="From preparation to pilgrimage and beyond, we arrange Hajj, Umrah and international travel with personal care, professional service and guidance you can rely on at every step." 
                 />
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-24 w-full sm:w-auto">
                     <ButtonPrimary text="Explore Hajj/Umrah" href="/#hajj/umrah" />
                     <ButtonSecondary text="Explore Tourism" href="/tourism" />
                 </div>
