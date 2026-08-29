@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import SectionTextLeft from "../general/SectionTextLeft";
 
 const Testimonial = () => {
@@ -35,19 +36,29 @@ const Testimonial = () => {
   ];
 
   return (
-    <section id="testimonial" className="bg-offwhite py-20 lg:py-28">
+    <section id="testimonial" className="bg-offwhite py-20 lg:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-16 w-full lg:w-1/3 md:w-1/2 sm:w-full">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mb-16 w-full lg:w-1/3 md:w-1/2 sm:w-full"
+        >
           <SectionTextLeft title="Hear from those who travelled with us." />
-        </div>
+        </motion.div>
 
         {/* Video Grid: 1 on mobile, 2 on tablet, 3 on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((video, index) => (
-            <div 
+            <motion.div 
               key={index} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               className="bg-offwhite rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col transition-transform duration-300 hover:-translate-y-1"
             >
               {/* Responsive 16:9 Aspect Ratio Container for Iframe */}
@@ -69,7 +80,7 @@ const Testimonial = () => {
                   {video.title}
                 </h3>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

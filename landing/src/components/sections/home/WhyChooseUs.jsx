@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import SectionTextLeft from '../general/SectionTextLeft';
 
 const WhyChooseUs = () => {
@@ -25,20 +26,33 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section id="why-choose-us" className="bg-white py-20 lg:py-28">
+        <section id="why-choose-us" className="bg-white py-20 lg:py-28 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header with 1/3 Width Constraint */}
-                <div className="mb-16 max-w-sm lg:w-1/3">
+                <motion.div 
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="mb-16 max-w-sm lg:w-1/3"
+                >
                     <SectionTextLeft 
                         title="Every claim here is something you can check." 
                     />
-                </div>
+                </motion.div>
 
                 {/* Table-like Feature List */}
                 <div className="flex flex-col">
                     {reason.map((feature, index) => (
-                        <div key={index} className="py-8 border-b border-gray-100 first:border-t first:border-gray-100">
+                        <motion.div 
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                            className="py-8 border-b border-gray-100 first:border-t first:border-gray-100"
+                        >
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start text-left">
                                 {/* Title (Spans full row on tablet, column 1 on desktop) */}
                                 <div className="sm:col-span-2 lg:col-span-1">
@@ -61,7 +75,7 @@ const WhyChooseUs = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 

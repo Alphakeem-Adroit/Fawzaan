@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Navbar from '../general/Navbar';
 import HeroText from '../general/HeroText';
 import ButtonPrimary from '../general/ButtonPrimary';
@@ -25,17 +26,26 @@ const Hero = () => {
             <Navbar />
 
             {/* Main Hero Content with adequate top padding to prevent navbar overlap */}
-            <div className="relative z-20 flex flex-col items-center justify-center grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center">
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-20 flex flex-col items-center justify-center grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center"
+            >
                 <HeroText 
                     title="Your journey of faith, made very easy." 
                     description="From preparation to pilgrimage and beyond, we arrange Hajj, Umrah and international travel with personal care, professional service and guidance you can rely on at every step." 
                 />
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 w-full sm:w-auto">
-                    <ButtonPrimary text="Explore Hajj/Umrah" href="/#hajj/umrah" />
-                    <ButtonSecondary text="Explore Tourism" href="/tourism" />
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 w-full max-w-sm sm:max-w-none">
+                    <div className="w-full sm:w-auto">
+                        <ButtonPrimary text="Explore Hajj/Umrah" href="/#hajj/umrah" />
+                    </div>
+                    <div className="w-full sm:w-auto">
+                        <ButtonSecondary text="Explore Tourism" href="/tourism" />
+                    </div>
                 </div>
-            </div>
+            </motion.div>
         </header>
     );
 };

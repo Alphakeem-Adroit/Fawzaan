@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from "motion/react";
 
 const Journey = () => {
     const [count, setCount] = useState(0);
@@ -50,8 +51,15 @@ const Journey = () => {
     }, [hasAnimated]);
 
     return (
-        <section id="journey" className="bg-white py-20 lg:py-28">
-            <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <section id="journey" className="bg-white py-20 lg:py-28 overflow-hidden">
+            <motion.div 
+                ref={ref} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
+            >
                 <p className="text-black/75 font-sans text-sm sm:text-base uppercase tracking-widest mb-4">
                     The Experience So Far
                 </p>
@@ -61,7 +69,7 @@ const Journey = () => {
                 <p className="text-black/75 font-sans max-w-2xl text-base sm:text-lg leading-relaxed mt-4">
                     Thousands of travelers have trusted Al-Fawzaan Makarem International with journeys of faith, family and discovery — this is their proof, not just our claim.
                 </p>
-            </div>
+            </motion.div>
         </section>
     );
 };

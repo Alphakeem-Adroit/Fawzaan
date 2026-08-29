@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import uae from '../../../assets/uae.jpg';
 import europe from '../../../assets/europe.jpg';
@@ -12,11 +13,11 @@ const Tourism = () => {
     const scrollRef = useRef(null);
 
     const destinations = [
-        { name: "UAE", image: uae },
-        { name: "Europe", image: europe },
-        { name: "United Kingdom", image: uk },
-        { name: "Canada", image: canada },
-        { name: "United States", image: us },
+        { name: "UAE", image: uae, href: "/tourism" },
+        { name: "Europe", image: europe, href: "/tourism" },
+        { name: "United Kingdom", image: uk, href: "/tourism" },
+        { name: "Canada", image: canada, href: "/tourism" },
+        { name: "United States", image: us, href: "/tourism" },
     ];
 
     const scrollLeft = () => {
@@ -36,12 +37,18 @@ const Tourism = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header with Controlled Width Container */}
-                <div className="mb-16 max-w-3xl mx-auto text-center">
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="mb-16 max-w-3xl mx-auto text-center"
+                >
                     <SectionTextCenter 
                         title="Explore Our Global Destinations" 
                         description="Discover breathtaking international locations tailored with premium hospitality, seamless visa processing, and unforgettable tour experiences." 
                     />
-                </div>
+                </motion.div>
 
                 {/* Horizontal Scrollable Destinations Container */}
                 <div 
@@ -50,9 +57,13 @@ const Tourism = () => {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {destinations.map((destination, index) => (
-                        <a 
+                        <motion.a 
                             key={index}
                             href={destination.href}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                             className="relative group overflow-hidden rounded-3xl h-130 sm:h-140 w-75 sm:w-87.5 md:w-100 shrink-0 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer block snap-start"
                         >
                             {/* Full Image Background */}
@@ -71,12 +82,18 @@ const Tourism = () => {
                                     {destination.name}
                                 </h3>
                             </div>
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
 
                 {/* Bottom CTA and Navigation Arrows */}
-                <div className="flex flex-col sm:flex-row items-center justify-between mt-12 gap-6">
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                    className="flex flex-col sm:flex-row items-center justify-between mt-12 gap-6"
+                >
                     <ButtonPrimary text="Get Started With Tourism" href="/tourism" />
 
                     <div className="flex items-center gap-4">
@@ -95,7 +112,7 @@ const Tourism = () => {
                             <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </section>

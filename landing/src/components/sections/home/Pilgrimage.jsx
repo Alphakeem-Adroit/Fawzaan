@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { ArrowRight } from 'lucide-react';
 import kabah_door from '../../../assets/kabah_door.png';
 import SectionTextLeft from '../general/SectionTextLeft';
@@ -24,12 +25,18 @@ const Pilgrimage = () => {
     ];
 
     return (
-        <section id="hajj/umrah" className="bg-white py-20 lg:py-28">
+        <section id="hajj/umrah" className="bg-white py-20 lg:py-28 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
                     
                     {/* Left Column: Title, Description & Feature List */}
-                    <div className="flex flex-col justify-between gap-16">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex flex-col justify-between gap-16"
+                    >
                         <div className="flex flex-col gap-16">
                             <SectionTextLeft 
                                 title="A Hajj/Umrah experience built for the way you travel." 
@@ -66,17 +73,23 @@ const Pilgrimage = () => {
                         <div>
                             <ButtonPrimary text="Start Your Journey" href="/contact" />
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Right Column: 100% Full Height Image */}
-                    <div className="relative w-full h-full min-h-112.5 sm:min-h-137.5 lg:min-h-full flex items-center justify-center">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                        className="relative w-full h-full min-h-112.5 sm:min-h-137.5 lg:min-h-full flex items-center justify-center"
+                    >
                         <div className="absolute inset-0 bg-navy/5 rounded-3xl transform rotate-2 scale-[0.98] -z-10" />
                         <img 
                             src={kabah_door} 
                             alt="Kabah Door" 
                             className="w-full h-full object-cover rounded-3xl shadow-2xl"
                         />
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

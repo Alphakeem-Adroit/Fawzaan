@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import company_logo from '../../../assets/company_logo.png';
 import nahcon from '../../../assets/nahcon.webp';
 import tnanta from '../../../assets/tnanta.png';
@@ -8,14 +9,20 @@ const Footer = () => {
   const linkStyle = "relative inline-block text-black hover:text-blue transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-[-2px] after:left-0 after:bg-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left";
 
   return (
-    <footer className="bg-offwhite pt-20 pb-12 border-t border-gray-200">
+    <footer className="bg-offwhite pt-20 pb-12 border-t border-gray-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-gray-200">
           
           {/* Brand Info Column (Left) */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-5 flex flex-col gap-6"
+          >
             <div className="flex flex-col items-start gap-4">
               <img 
                 src={company_logo} 
@@ -51,10 +58,16 @@ const Footer = () => {
                 <img src={iata} alt="IATA logo" className="w-full h-full object-contain" />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Links and Contact Columns (Right) - Single col on mobile, 2 cols on tablet, 4 cols on desktop */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+          >
             
             {/* Services */}
             <div className="flex flex-col gap-4">
@@ -91,15 +104,21 @@ const Footer = () => {
               </ul>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-gray-500 text-center sm:text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-gray-500 text-center sm:text-left"
+        >
           <p>&copy; 2026 Al-Fawzaan Makarem International Travels & Tours Limited. All Rights Reserved.</p>
           <small>Website designed and developed with ❤️ by <a href="https://wa.me/2349033023139" className="relative inline-block text-blue hover:text-black transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:-bottom-0.5 after:left-0 after:bg-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">@alphakeemAdroit</a></small>
-        </div>
+        </motion.div>
 
       </div>
     </footer>

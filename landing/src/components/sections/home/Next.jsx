@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import SectionTextLeft from "../general/SectionTextLeft";
 import sky from '../../../assets/sky.png';
 import registration from '../../../assets/registration.png';
@@ -58,15 +59,25 @@ const Next = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Section Text */}
-          <div className="lg:col-span-4 lg:sticky">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-4 lg:sticky"
+          >
             <SectionTextLeft title="What happens after you register." className="[&_h2]:text-white" />
-          </div>
+          </motion.div>
 
           {/* Right Column: Containers Grid (Longer than square / Portrait cards) */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {steps.map((step, index) => (
-              <div 
+              <motion.div 
                 key={index} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                 className="relative h-110 sm:h-120 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between p-8 bg-cover bg-center group transition-transform duration-300 hover:-translate-y-2"
                 style={{ backgroundImage: `url(${step.image})` }}
               >
@@ -89,7 +100,7 @@ const Next = () => {
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
