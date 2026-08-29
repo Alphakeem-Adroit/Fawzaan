@@ -31,7 +31,7 @@ const Hero = () => {
                     description="From preparation to pilgrimage and beyond, we arrange Hajj, Umrah and international travel with personal care, professional service and guidance you can rely on at every step." 
                 />
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-24 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 w-full sm:w-auto">
                     <ButtonPrimary text="Explore Hajj/Umrah" href="/#hajj/umrah" />
                     <ButtonSecondary text="Explore Tourism" href="/tourism" />
                 </div>
