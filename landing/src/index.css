@@ -3,10 +3,15 @@
 @theme {
   --color-navy: #1F1472;
   --color-white: #ffffff;
+  --color-offwhite: #F5F5F5;
   --color-black: #212121;
   --color-skyblue: #3F92E2;
   --color-blue: #2252C6;
   
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Fraunces', serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
