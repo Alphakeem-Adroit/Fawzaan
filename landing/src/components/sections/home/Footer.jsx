@@ -84,7 +84,7 @@ const Footer = () => {
               <p className="font-serif font-bold text-lg text-blue tracking-tight">Company</p>
               <ul className="flex flex-col gap-3 font-sans text-black">
                 <li><a href="/#why-choose-us" className={linkStyle}>About Us</a></li>
-                <li><a href="/#why-choose-us" className={linkStyle}>Our Values</a></li>
+                <li><a href="/#lecture" className={linkStyle}>Our Values</a></li>
                 <li><a href="/#testimonial" className={linkStyle}>Testimonials</a></li>
                 <li><a href="/#faq" className={linkStyle}>FAQs</a></li>
               </ul>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import company_logo from '../../../assets/company_logo.png';
 
 const Navbar = () => {
@@ -6,12 +7,12 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Home', href: '#' },
-        { name: 'Hajj/Umrah', href: '#hajj/umrah' },
-        { name: 'Tourism', href: '#tourism' },
-        { name: 'Why Us', href: '#why-choose-us' },
-        { name: 'FAQ', href: '#faq' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'Home', to: '/' },
+        { name: 'Hajj/Umrah', to: '/#hajj/umrah' },
+        { name: 'Tourism', to: '/tourism' },
+        { name: 'Why Us', to: '/#why-choose-us' },
+        { name: 'FAQ', to: '/#faq' },
+        { name: 'Contact', to: '/contact' }
     ];
 
     useEffect(() => {
@@ -42,7 +43,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                     
                     {/* Brand Container (Logo & Company Name) */}
-                    <div className="flex items-center gap-4">
+                    <Link to="/" className="flex items-center gap-4 focus:outline-none">
                         <img 
                             src={company_logo} 
                             alt="Al-Fawzaan Makarem International Travels & Tours Ltd Logo" 
@@ -60,7 +61,7 @@ const Navbar = () => {
                                 International Travels & Tours Ltd
                             </p>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Desktop Nav Links (Glassmorphism Pill - Side by Side with Branding) */}
                     <div className="hidden md:flex items-center">
@@ -71,12 +72,12 @@ const Navbar = () => {
                         }`}>
                             {navLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a 
-                                        href={link.href}
+                                    <Link 
+                                        to={link.to}
                                         className="font-sans font-medium text-sm transition-colors duration-200 hover:text-navy"
                                     >
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -115,24 +116,24 @@ const Navbar = () => {
                     isMenuOpen ? 'translate-x-0' : '-translate-x-full'
                 }`}
             >
-                <div className="flex items-center gap-3 p-6 border-b border-gray-100">
+                <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 p-6 border-b border-gray-100">
                     <img src={company_logo} alt="Al-Fawzaan Makarem Logo" className="w-10 h-10 object-contain" />
                     <div>
                         <h2 className="font-serif text-lg font-bold text-navy leading-tight">Al-Fawzaan Makarem</h2>
                         <p className="font-sans text-xs text-gray-600">International Travels & Tours Ltd</p>
                     </div>
-                </div>
+                </Link>
 
                 <ul className="flex flex-col py-4 overflow-y-auto">
                     {navLinks.map((link, index) => (
                         <li key={index}>
-                            <a 
-                                href={link.href}
+                            <Link 
+                                to={link.to}
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-6 py-4 font-sans text-gray-800 font-medium transition-colors duration-200 hover:bg-gray-50 hover:text-navy border-l-4 border-transparent hover:border-navy"
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
