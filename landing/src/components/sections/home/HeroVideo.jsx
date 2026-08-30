@@ -13,7 +13,9 @@ const Hero = () => {
                 autoPlay 
                 loop 
                 muted 
-                playsInline 
+                playsInline
+                preload="auto"
+                poster="../../../assets/sky.png" 
                 className="absolute inset-0 w-full h-full object-cover z-0"
             >
                 <source src={SaudiAirTakeOff} type="video/mp4" />
