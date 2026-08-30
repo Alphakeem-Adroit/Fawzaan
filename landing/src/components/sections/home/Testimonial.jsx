@@ -5,28 +5,28 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      title: "Our unforgettable Umrah journey with Al-Fawzaan",
-      embedUrl: "https://www.youtube.com/embed/G0I7-lG39VA?si=7wHqsfC1dz6ar9qi",
+      title: "Unforgettable Hajj & Umrah journey with Al-Fawzaan Makarem",
+      embedUrl: "https://www.youtube.com/embed/dMmXt4RRdOI?si=9J4gE6dbP5rYe2br",
     },
     {
       id: 2,
-      title: "Seamless visa processing and exceptional ground guidance",
-      embedUrl: "https://www.youtube.com/embed/G0I7-lG39VA?si=7wHqsfC1dz6ar9qi",
+      title: "Pilgrims priorities and exceptional welfare",
+      embedUrl: "https://youtube.com/embed/c_Dk57XIqMc?si=iJ0xCkuil9HkC0v0",
     },
     {
       id: 3,
-      title: "From documentation to travel day, everything was smooth",
-      embedUrl: "https://www.youtube.com/embed/G0I7-lG39VA?si=7wHqsfC1dz6ar9qi",
+      title: "Fulfilled Promises to Pilgrims",
+      embedUrl: "https://www.youtube.com/embed/IE6ACvNh9aI?si=MiDGUFZbCk_Z7rcF",
     },
     {
       id: 4,
-      title: "Our unforgettable Umrah journey with Al-Fawzaan",
-      embedUrl: "https://www.youtube.com/embed/G0I7-lG39VA?si=7wHqsfC1dz6ar9qi",
+      title: "Dignitories Endorsing Al-Fawzaan Makarem.mp4",
+      embedUrl: "https://www.youtube.com/embed/V-n-AVRuXnk?si=1x5vID92ltUX13RM",
     },
     {
       id: 5,
-      title: "Seamless visa processing and exceptional ground guidance",
-      embedUrl: "https://www.youtube.com/embed/G0I7-lG39VA?si=7wHqsfC1dz6ar9qi",
+      title: "Pilgrims Chanting Adhkar",
+      embedUrl: "https://www.youtube.com/embed/EVW04KRkS54?si=3iDZU7ARQKoeeCbi",
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ const Testimonial = () => {
 
               {/* Card Title/Description */}
               <div className="p-6 flex-1 flex items-center">
-                <h3 className="font-serif font-semibold text-lg sm:text-xl text-black tracking-tight leading-snug">
+                <h3 className="font-serif font-semibold text-lg sm:text-lg text-navy tracking-tight leading-snug">
                   {video.title}
                 </h3>
               </div>
