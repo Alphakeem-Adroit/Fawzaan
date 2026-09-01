@@ -36,7 +36,8 @@ const TravelPlaces = () => {
   ];
 
   return (
-    <motion.section 
+    <motion.section
+    id="destinations"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
