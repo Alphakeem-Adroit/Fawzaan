@@ -84,7 +84,7 @@ const Journey = () => {
                 <p className="font-serif font-semibold text-white text-4xl tracking-tight">Have somewhere specific in mind?</p>
 
                 <div className="flex flex-col sm:flex-col lg:flex-row md:flex-row gap-4">
-                    <ButtonPrimary text="Start Planning" href="/contact" />
+                    <ButtonPrimary text="Start Planning" href="/tourism/#plan-trip" />
                     <ButtonSecondary text="Talk to Us" href="/contact" />
                 </div>
             </motion.div>
