@@ -29,12 +29,12 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 118, 182, 0.6);
+  background: rgba(59, 140, 183, 0);
   border-radius: 9999px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -42,7 +42,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 118, 182, 0.9);
+  background: rgba(0, 118, 182, 0);
   background-clip: content-box;
 }
 
