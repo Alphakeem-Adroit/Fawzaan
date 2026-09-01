@@ -1,6 +1,5 @@
-
-
-
+import Travel from '../components/sections/tourism/Travel';
+import TripPlan from '../components/sections/tourism/TripPlan';
 import Next from '../components/sections/tourism/Next';
 import Journey from '../components/sections/tourism/Journey';
 import FAQ from '../components/sections/tourism/FAQ';
@@ -10,6 +9,8 @@ import Footer from '../components/sections/home/Footer';
 const Tourism = () => {
   return (
     <main>
+        <Travel />
+        <TripPlan />
         <Next />
         <Journey />
         <FAQ />
