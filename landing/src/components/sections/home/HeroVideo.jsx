@@ -32,7 +32,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-20 flex flex-col items-center justify-center grow px-4 sm:px-6 lg:px-8 pt-36 pb-24 max-w-6xl mx-auto text-center"
+                className="relative z-20 flex flex-col items-center justify-center grow px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-6xl mx-auto text-center"
             >
                 <HeroText 
                     title="Your journey of faith, made very easy." 

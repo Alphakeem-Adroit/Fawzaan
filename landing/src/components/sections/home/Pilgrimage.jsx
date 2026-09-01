@@ -70,7 +70,7 @@ const Pilgrimage = () => {
                             </div>
                         </div>
                         
-                        <div className="w-1/2">
+                        <div className="w-full sm:w-auto md:w-1/2 lg:w-1/2">
                             <ButtonPrimary text="Start Your Journey" href="/contact" />
                         </div>
                     </motion.div>

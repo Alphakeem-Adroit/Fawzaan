@@ -83,7 +83,7 @@ const Lecture = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                            className="w-1/2"
+                            className="w-full sm:w-auto md:w-1/2 lg:w-1/2"
                         >
                             <ButtonPrimary text="Start Your Journey" href="/contact" />
                         </motion.div>
