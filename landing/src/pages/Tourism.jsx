@@ -1,3 +1,4 @@
+import Support from '../components/sections/tourism/Support';
 import TravelPlaces from '../components/sections/tourism/TravelPlaces';
 import Travel from '../components/sections/tourism/Travel';
 import TripPlan from '../components/sections/tourism/TripPlan';
@@ -10,6 +11,7 @@ import Footer from '../components/sections/home/Footer';
 const Tourism = () => {
   return (
     <main>
+        <Support />
         <TravelPlaces />
         <Travel />
         <TripPlan />
