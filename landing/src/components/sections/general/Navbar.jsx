@@ -11,7 +11,6 @@ const Navbar = () => {
         { name: 'Hajj/Umrah', to: '/#hajj/umrah' },
         { name: 'Tourism', to: '/tourism' },
         { name: 'Why Us', to: '/#why-choose-us' },
-        { name: 'FAQ', to: '/#faq' },
         { name: 'Contact', to: '/contact' }
     ];
 
