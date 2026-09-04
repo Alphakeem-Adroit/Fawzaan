@@ -3,7 +3,7 @@ import Navbar from '../general/Navbar';
 import ButtonPrimary from '../general/ButtonPrimary';
 import ButtonSecondary from '../general/ButtonSecondary';
 import sky from '../../../assets/sky.png';
-import kabah3d from '../../../assets/kabah3d.png';
+import kabah from '../../../assets/kabah.png';
 import nahcon from '../../../assets/nahcon.webp';
 import tnanta from '../../../assets/tnanta.png';
 import iata from '../../../assets/iata.png';
@@ -59,7 +59,7 @@ const Hero = () => {
                 >
                     {/* Optimized Floating Kabah Image for Desktop Viewport */}
                     <motion.img 
-                        src={kabah3d} 
+                        src={kabah} 
                         alt="Kabah 3D Graphic" 
                         className="w-64 sm:w-80 lg:w-95 xl:w-110 h-auto drop-shadow-2xl"
                         animate={{ y: [0, -14, 0] }}
