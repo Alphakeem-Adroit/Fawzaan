@@ -15,7 +15,7 @@ const Hero = () => {
             className="bg-cover bg-center bg-no-repeat relative min-h-screen flex flex-col justify-between overflow-hidden" 
             style={{ backgroundImage: `url(${sky})` }}
         > 
-            {/* SkyBlue Overlay */}
+            {/* SkyBlue Overlay  */}
             <div className="absolute inset-0 bg-skyblue/40 z-0" />
 
             <Navbar />
