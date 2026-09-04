@@ -3,6 +3,7 @@ import company_logo from '../../../assets/company_logo.png';
 import nahcon from '../../../assets/nahcon.webp';
 import tnanta from '../../../assets/tnanta.png';
 import iata from '../../../assets/iata.png';
+import hutoaon from '../../../assets/hutoaon.png';
 
 const Footer = () => {
   // Reusable animated underline style for all links
@@ -56,6 +57,9 @@ const Footer = () => {
               </div>
               <div className="w-24 h-24 flex items-center justify-center">
                 <img src={iata} alt="IATA logo" className="w-full h-full object-contain" />
+              </div>
+              <div className="w-18 h-18 flex items-center justify-center">
+                <img src={hutoaon} alt="HUTOAON logo" className="w-full h-full object-contain" />
               </div>
             </div>
           </motion.div>

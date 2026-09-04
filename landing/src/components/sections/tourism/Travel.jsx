@@ -12,7 +12,7 @@ const Travel = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="w-full h-[350px] md:h-full min-h-[400px] overflow-hidden relative group"
+          className="w-full h-87.5 md:h-full min-h-100 overflow-hidden relative group"
         >
           <img 
             src={plane} 

@@ -56,7 +56,7 @@ const TravelPlaces = () => {
         >
           <SectionTextLeft 
             title="Places we currently travel to." 
-            description="Five regions, five different kinds of journey — each shaped around what you're travelling for." 
+            description="Five regions, five different kinds of journey — each shaped around what you're traveling for." 
           />
         </motion.div>
 
@@ -69,7 +69,7 @@ const TravelPlaces = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-5 h-[450px] lg:h-[600px] relative overflow-hidden group shadow-md"
+            className="lg:col-span-5 h-112.5 lg:h-150 relative overflow-hidden group shadow-md"
           >
             <img 
               src={uae} 
@@ -77,7 +77,7 @@ const TravelPlaces = () => {
               className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110" 
             />
             {/* Black gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8 sm:p-10 transition-all duration-500">
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8 sm:p-10 transition-all duration-500">
               <p className="font-serif text-2xl sm:text-3xl text-white mb-2 transform transition-transform duration-300 group-hover:translate-x-1">
                 United Arab Emirates
               </p>

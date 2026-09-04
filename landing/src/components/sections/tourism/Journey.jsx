@@ -66,7 +66,7 @@ const Journey = () => {
                     Trusted With The Journey
                 </p>
                 <div className="font-serif font-semibold text-blue text-6xl sm:text-8xl lg:text-9xl tracking-tight mb-6">
-                    <span>{count.toLocaleString()}</span>+ travellers
+                    <span>{count.toLocaleString()}</span>+ travelers
                 </div>
                 <p className="text-black/75 font-sans max-w-2xl text-base sm:text-lg leading-relaxed mt-4">
                     The same trust that guides our Hajj and Umrah pilgrims extends to every international trip we help arrange.

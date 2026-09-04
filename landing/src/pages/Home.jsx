@@ -1,5 +1,4 @@
-// import Hero from '../components/sections/home/Hero';
-import HeroVideo from '../components/sections/home/HeroVideo';
+import Hero from '../components/sections/home/Hero';
 import Pilgrimage from '../components/sections/home/Pilgrimage';
 import Tourism from '../components/sections/home/Tourism';
 import WhyChooseUs from '../components/sections/home/WhyChooseUs';
@@ -14,8 +13,7 @@ import Footer from '../components/sections/home/Footer';
 const Home = () => {
     return (
         <main>
-            {/* <Hero /> */}
-            <HeroVideo />
+            <Hero />
             <Pilgrimage />
             <Tourism />
             <WhyChooseUs />
